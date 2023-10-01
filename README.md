@@ -6,7 +6,7 @@ Right now only for 1.20.1
 ## KubeJS
 To use KubeJS integration use startup event `MIBatchCrafting.modifyMachines(e => {...})`.
 
-Internally we just have a set of all the machines and a flag that says if the list is a blacklist or a whitelist, by default it's blacklist.
+Internally there is a set of all the machines and a flag that says if the list is a blacklist or a whitelist (by default it's blacklist).
 
 ```java
 List<String> getList()
@@ -21,3 +21,5 @@ boolean addToList(String elem)
 
 boolean doesListContain(String elem)
 ```
+
+You need to add to the list the block entity id. If you want for example to add electric compressor to the list, you need to add `modern_industrialization:electric_compressor`
