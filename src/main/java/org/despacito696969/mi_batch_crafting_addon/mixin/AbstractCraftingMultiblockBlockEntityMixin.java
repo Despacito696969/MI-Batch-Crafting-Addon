@@ -35,6 +35,7 @@ public abstract class AbstractCraftingMultiblockBlockEntityMixin extends Machine
         // I tried to add these into the block entity constructors when blocks are registered, but I failed :(
         if (BatchComponentRegistry.allowed(bep)) {
             registerGuiComponent(new BatchSelection.Server((BatchSelection.BatchCrafterComponent) getCrafterComponent()));
+            ((BatchSelection.BatchCrafterComponent) getCrafterComponent()).MIBatchCraftingAddon$setBatchingState(true);
         }
     }
 }

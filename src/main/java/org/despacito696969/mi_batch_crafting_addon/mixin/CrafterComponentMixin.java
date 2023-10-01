@@ -56,7 +56,7 @@ public class CrafterComponentMixin implements BatchSelection.BatchCrafterCompone
         if (MIBatchCraftingAddon$desiredBatchSize > MIBatchCraftingAddon.BATCH_MAX) {
             MIBatchCraftingAddon$desiredBatchSize = MIBatchCraftingAddon.BATCH_MAX;
         }
-        if (MIBatchCraftingAddon$isBatchingEnabled) {
+        if (!MIBatchCraftingAddon$isBatchingEnabled) {
             MIBatchCraftingAddon$desiredBatchSize = 1;
         }
         if (efficiencyTicks == 0) {
@@ -84,6 +84,10 @@ public class CrafterComponentMixin implements BatchSelection.BatchCrafterCompone
         if (this.MIBatchCraftingAddon$isBatchingEnabled) {
             // We don't need to save desiredBatchSize == 1
             tag.putInt(DESIRED_BATCH_SIZE_NBT, this.MIBatchCraftingAddon$desiredBatchSize);
+        }
+        else {
+            // Troll (not really, nbt clean up is very important :gladeline:)
+            tag.remove(DESIRED_BATCH_SIZE_NBT);
         }
     }
 

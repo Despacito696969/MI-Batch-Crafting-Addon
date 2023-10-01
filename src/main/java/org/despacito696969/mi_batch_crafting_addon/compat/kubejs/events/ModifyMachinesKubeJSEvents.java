@@ -2,9 +2,7 @@ package org.despacito696969.mi_batch_crafting_addon.compat.kubejs.events;// pack
 
 import dev.latvian.mods.kubejs.event.EventJS;
 import org.despacito696969.mi_batch_crafting_addon.BatchComponentRegistry;
-import org.despacito696969.mi_batch_crafting_addon.BatchSelection;
 
-import java.util.Collection;
 import java.util.List;
 
 public class ModifyMachinesKubeJSEvents extends EventJS {

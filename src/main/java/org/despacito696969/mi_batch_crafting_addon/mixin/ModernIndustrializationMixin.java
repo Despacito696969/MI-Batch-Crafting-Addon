@@ -16,10 +16,4 @@ public class ModernIndustrializationMixin {
     private static void setupPacketsMixin(CallbackInfo ci) {
         ServerPlayNetworking.registerGlobalReceiver(BatchSelection.PacketsC2S.CHANGE_BATCH_SIZE, BatchSelection.PacketsC2S.ON_CHANGE_BATCH_SIZE);
     }
-
-    @Inject(method = "initialize", at = @At("HEAD"), remap = false)
-    private static void initializeMixin(CallbackInfo ci) {
-        // Here we add KubeJS
-        KubeJSProxy.instance.fireBatchCraftingModifyMachines();
-    }
 }

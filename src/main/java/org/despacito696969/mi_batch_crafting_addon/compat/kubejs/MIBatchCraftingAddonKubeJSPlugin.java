@@ -12,5 +12,6 @@ public class MIBatchCraftingAddonKubeJSPlugin extends KubeJSPlugin {
     @Override
     public void initStartup() {
         KubeJSProxy.instance = new LoadedKubeJSProxy();
+        KubeJSProxy.instance.fireBatchCraftingModifyMachines();
     }
 }
