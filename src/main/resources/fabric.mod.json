@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "mi_batch_crafting_addon",
+  "version": "${version}",
+  "name": "Modern Industrialization Batch Crafting Addon",
+  "description": "Allows to give machines/multiblocks batch crafting component which allows to craft up 64 recipes in parallel",
+  "authors": [
+    "Despacito696969"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/mi_batch_crafting_addon/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.despacito696969.mi_batch_crafting_addon.client.MIBatchCraftingAddonClient"
+    ],
+    "main": [
+      "org.despacito696969.mi_batch_crafting_addon.MIBatchCraftingAddon"
+    ]
+  },
+  "mixins": [
+    "mi_batch_crafting_addon.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}",
+    "modern_industrialization": ">=1.7.3"
+  }
+}
