@@ -1,3 +1,10 @@
+// This almost works, however there is no way to modify method parameter based on other
+// method parameter, and we can't redirect since we want to replace every single use,
+// and others might use this method in their own addons, so just because there isn't
+// a thing like @ModifyVariables (plural), I have to do this stupid way and every time
+// we make blockentity we need to do a lookup in string set
+
+
 // package org.despacito696969.mi_batch_crafting_addon.mixin;
 /*
 import aztech.modern_industrialization.machines.BEP;
